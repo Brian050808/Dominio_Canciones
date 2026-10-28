@@ -4,6 +4,9 @@ import java.time.LocalDateTime;
 
 // DTOs: así nunca se expone el password en las respuestas JSON
 public class UsuarioDtos {
+public record LoginRequest(String email, String password) {}
+
+public record TokenResponse(String token, String tipo, long expiraEnSegundos) {}
 
     public record RegistroRequest(String nombre, String email, String password, Boolean aceptaAviso) {}
 
